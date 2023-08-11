@@ -388,12 +388,12 @@ section .title::after{
 }
 .highlights.image-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 600px;
     width: 100%;
 }
 .image {
-    width: calc(33.33% - 10px); 
+    width: calc(100% - 10px); 
 }
 .image img {
     width: 100%;
@@ -465,6 +465,7 @@ section .title::after{
     background: #77C66E!important;
 }
 
+/* beginning credits styling */
 
 .credits .credits-content .column{
     width: calc(50% - 30px);
