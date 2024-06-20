@@ -6,10 +6,39 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    /* justify-content: center;
+    align-items: center; */
+
 }
 html{
     scroll-behavior: smooth;
 }
+
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 600px; /* Optional: limits the maximum width */
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -221,7 +250,7 @@ section .title::after{
 
 /* project section styling */
 .project .title::after{
-    content: "Organization: Youth in Transformation (YIT)";
+    /* content: "Organization: Youth in Transformation (YIT)"; */
 }
 .project .project-content .left{
     width: 45%;
@@ -275,7 +304,7 @@ section .title::after{
 .skills .title::after,
 .highlights .title::after{
     background: #111;
-    content: "skills I utilized";
+    content: "what I have learned"; /* Add text under skills  */
 }
 .skills .serv-content .card{
     width: calc(33% - 20px);
@@ -312,7 +341,7 @@ section .title::after{
 /* achievements section styling */
 
 .achievements .title::after{
-    content: "what we did";
+    content: "what I have achieved";
 }
 .achievements .achievements-content .column{
     width: calc(50% - 30px);
@@ -381,10 +410,33 @@ section .title::after{
     width: 50%;
 }
 
+/* For embedded pdfs*/
+.pdf-container {
+    width: auto;
+    height: 700px;
+    /* max-width: 600px; Optional: limits the maximum width */
+    justify-content: center;
+
+}
+
+.pdf-container iframe {
+    width: 80%;
+    height: 700px;
+}
+
+/* For embeded videos*/
+.video-container {
+    width: 80%;
+    max-width: 600px; /* Optional: limits the maximum width */
+}
+.video-container iframe {
+    width: 100%;
+    height: auto;
+}
 
 /* highlights section styling */
 .highlights .title::after{
-    content: "the best moments and memories";
+    /* content: "the best moments and memories"; */
 }
 .highlights.image-row {
     display: flex;
@@ -563,7 +615,7 @@ section .title::after{
 
 /* takeaways section styling */
 .takeaways .title::after{
-    content: "lessons learned, advice & tips"
+    content: "lessons learned, advice & motivations"
 }
 .takeaways .takeaways-content .column{
     width: calc(50% - 30px);
@@ -741,7 +793,7 @@ footer span a:hover{
         flex: 100%;
     }
     .project .project-content a{
-        font-size: 23px;
+        font-size: auto;
         padding: 10px 30px;
     }
     .skills .serv-content .card{
