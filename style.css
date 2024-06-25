@@ -356,12 +356,30 @@ section .title::after {
     color: #77C66E;
     background: none;
 }
-.highlights .highlights-content .column {
-    width: calc(50% - 10px);
-    text-align: center; /* Center the items horizontally */
+
+
+/* Adjusting the highlights section to center all content */
+.highlights .highlights-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.highlights .highlights-content .column a {
+.highlights .highlights-content .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.highlights .highlights-content .text span {
+    color: #77C66E;
+}
+
+.highlights .highlights-content p {
+    text-align: justify;
+}
+
+.highlights .highlights-content a {
     display: inline-block;
     background: #77C66E;
     color: #fff;
@@ -374,7 +392,7 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.highlights .highlights-content .column a:hover {
+.highlights .highlights-content a:hover {
     color: #77C66E;
     background: none;
 }
