@@ -39,14 +39,14 @@ html {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
-.project, .skills, .achievements, .highlights, .takeaways, .credits, footer {
+.project, .skills, .achievements, ., .perspective, .credits, footer {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -54,7 +54,7 @@ section {
 .skills .serv-content,
 .achievements .hightlights-content,
 .credits, .credits-content,
-.takeaways .takeaways-content {
+.perspective .perspective-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -75,9 +75,9 @@ section {
 section .title {
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -95,7 +95,7 @@ section .title::after {
     position: absolute;
     bottom: -8px;
     left: 50%;
-    font-size: 20px;
+    font-size: 18px;
     color: #77C66E;
     padding: 0 5px;
     background: #fff;
@@ -274,14 +274,21 @@ section .title::after {
     background: none;
 }
 
-.skills, .highlights {
+/* adding project styling */
+.project .project-content .column {
+    width: calc(50% - 10px);
+}
+
+/* end project additions */
+
+.skills, .resume {
     color: #fff;
     background: #111;
 }
-.skills .title::before, .highlights .title::before {
+.skills .title::before, .resume .title::before {
     background: #fff;
 }
-.skills .title::after, .highlights .title::after {
+.skills .title::after, .resume .title::after {
     background: #111;
     content: "";
 }
@@ -358,28 +365,28 @@ section .title::after {
 }
 
 
-/* Adjusting the highlights section to center all content */
-.highlights .highlights-content {
+/* Adjusting the resume section to center all content */
+.resume .resume-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.highlights .highlights-content .text {
+.resume .resume-content .text {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.highlights .highlights-content .text span {
+.resume .resume-content .text span {
     color: #77C66E;
 }
 
-.highlights .highlights-content p {
+.resume .resume-content p {
     text-align: justify;
 }
 
-.highlights .highlights-content a {
+.resume .resume-content a {
     display: inline-block;
     background: #77C66E;
     color: #fff;
@@ -392,33 +399,33 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.highlights .highlights-content a:hover {
+.resume .resume-content a:hover {
     color: #77C66E;
     background: none;
 }
 
 
-.takeaways {
+.perspective {
     background: #111;
     color: #fff;
 }
-.takeaways .title::after {
+.perspective .title::after {
     background: #111;
     color: #fff;
     content: "";
 }
-.takeaways .takeaways-content .column {
+.perspective .perspective-content .column {
     width: calc(50% - 10px);
 }
-.takeaways .takeaways-content .column .text {
+.perspective .perspective-content .column .text {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.takeaways .takeaways-content .column .text span {
+.perspective .perspective-content .column .text span {
     color: #77C66E;
 }
-.takeaways .takeaways-content .column p {
+.perspective .perspective-content .column p {
     text-align: justify;
 }
 
@@ -445,7 +452,7 @@ footer {
     padding: 5px 0;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 10px;
 }
 footer span a {
     color: #77C66E;
@@ -500,7 +507,7 @@ footer span a {
         margin: 10px 0;
         font-size: 20px;
     }
-    .project, .skills, .achievements, .highlights, .takeaways, .credits, footer {
+    .project, .skills, .achievements, .resume, .perspective, .credits, footer {
         font-family: 'Poppins', sans-serif;
     }
     .project .project-content .right a, 
@@ -522,15 +529,16 @@ footer span a {
     .max-width {
         padding: 0 23px;
     }
-    .project .project-content .left img {
+    /* .project .project-content .left img {
         height: 300px;
         width: 300px;
-    }
+    } */
     .skills .serv-content .card {
         width: 100%;
     }
     .achievements .achievements-content .column, 
-    .takeaways .takeaways-content .column, 
+    .project .project-content .column,
+    .perspective .perspective-content .column, /* 7/6 */
     .credits .credits-content .column {
         width: 100%;
     }
