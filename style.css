@@ -234,30 +234,52 @@ section .title::after {
 .project .title::after {
     content: "";
 }
-.project .project-content .left {
-    width: 45%;
+
+.project .project-content {
+    display: flex;
+    flex-wrap: wrap;
 }
-.project .project-content .left img {
-    height: 400px;
-    width: 400px;
+
+ 
+
+.project .project-content img {
+    height: auto;
+    width: 40%; /* Ensure the image takes the full width of the container */
     object-fit: cover;
     border-radius: 6px;
+    float: left; /* Allow the text to wrap around the image */
+    margin-right: 20px; /*Add space between the image and the text*/
 }
-.project .project-content .right {
-    width: 55%;
+
+.project .project-content .video-container {
+    border-radius: 6px;
+    float: left; /* Allow the text to wrap around the image */
+    margin-right: 20px; /* Add space between the image and the text */
 }
-.project .project-content .right .text {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
+
+ 
+ 
+.project .project-card  {
+    background: #77C66E;
+     text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    margin: 2%
+
 }
-.project .project-content .right .text span {
-    color: #77C66E;
+
+.project .project-content {
+    flex-wrap: wrap;
+
 }
-.project .project-content .right p {
+
+
+.project .project-content p{
     text-align: justify;
 }
-.project .project-content .right a {
+
+.project .project-content a {
     display: inline-block;
     background: #77C66E;
     color: #fff;
@@ -269,17 +291,11 @@ section .title::after {
     border: 2px solid #77C66E;
     transition: all 0.3s ease;
 }
-.project .project-content .right a:hover {
-    color: #77C66E;
+
+.project .project-content a:hover {
+    color: #000;
     background: none;
 }
-
-/* adding project styling */
-.project .project-content .column {
-    width: calc(50% - 10px);
-}
-
-/* end project additions */
 
 .skills, .resume {
     color: #fff;
@@ -326,12 +342,38 @@ section .title::after {
 
 .achievements .title::after {
     content: "what I have achieved";
+    border: 30%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
+
 }
+
+.achievements::before {
+
+filter: blur(8px); /* Adjust the blur radius as needed */
+opacity: 0.3; /* Adjust the opacity as needed */
+z-index: -1; /* Place it behind the content */
+}
+.achievements {
+    display: flex;
+    background: url("images/mellon photo.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .achievements .achievements-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border: 30%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
+
 }
 .achievements .achievements-content .column {
     width: calc(50% - 10px);
@@ -376,7 +418,7 @@ section .title::after {
 .resume .resume-content .text {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .resume .resume-content .text span {
     color: #77C66E;
