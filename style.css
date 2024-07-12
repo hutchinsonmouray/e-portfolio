@@ -346,11 +346,7 @@ border: 30%;
 border-radius: 5px;
 }
 
-.achievements .title::after {
-    content: "what I have achieved";
-    background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
 
-}
 
 .achievements::before {
 
