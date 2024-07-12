@@ -340,10 +340,14 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 
+.achievements .title {
+background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
+border: 30%;
+border-radius: 5px;
+}
+
 .achievements .title::after {
     content: "what I have achieved";
-    border: 30%;
-    border-radius: 5px;
     background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
 
 }
@@ -356,7 +360,8 @@ z-index: -1; /* Place it behind the content */
 }
 .achievements {
     display: flex;
-    background: url("images/mellon photo.jpg") no-repeat center;
+    /* background: gray; */
+    background: url("images/groupintern.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -372,6 +377,7 @@ z-index: -1; /* Place it behind the content */
     justify-content: space-between;
     border: 30%;
     border-radius: 5px;
+    padding: 3%;
     background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background to improve text readability */
 
 }
